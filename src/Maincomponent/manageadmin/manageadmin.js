@@ -15,7 +15,7 @@ export default class Dashboard extends Component {
         }
     }
     componentDidMount = () => {
-        fetch('http://18.234.207.58:5000/manageadmin')
+        fetch('http://52.90.213.211:5000/manageadmin')
         .then((response) => response.json())
         .then((responseJson) => {
             console.log(responseJson)
@@ -31,7 +31,7 @@ export default class Dashboard extends Component {
 
 handleDetails = () => {
     let {name,email,address, phone}  = this.state
-    fetch('http://18.234.207.58:5000/manageadmin/managedetails/', {
+    fetch('http://52.90.213.211:5000/manageadmin/managedetails/', {
         method: 'POST',
         headers: {
           Accept: 'application/json',

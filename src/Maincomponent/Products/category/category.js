@@ -18,7 +18,7 @@ export default class Location extends Component {
   }
 
   handlePaginationChange = (event, { activePage} ) => {
-    fetch('http://18.234.207.58:5000/category/'+activePage)
+    fetch('http://52.90.213.211:5000/category/'+activePage)
     .then((response) => response.json())
     .then((responseJson) => {
         console.log(responseJson)
@@ -30,7 +30,7 @@ export default class Location extends Component {
 
 }
 fetchnewresponse= () => {
-  fetch('http://18.234.207.58:5000/category/')
+  fetch('http://52.90.213.211:5000/category/')
 .then((response) => response.json())
 .then((responseJson) => {
   console.log(responseJson)
@@ -43,7 +43,7 @@ console.error(error);
 }
     componentDidMount = () => {
     console.log("COmponent mounting")
-        fetch('http://18.234.207.58:5000/category/')
+        fetch('http://52.90.213.211:5000/category/')
     .then((response) => response.json())
     .then((responseJson) => {
         console.log(responseJson)
@@ -75,7 +75,7 @@ console.error(error);
       data.append('cn',cn)
       data.append('cd',cd)
       data.append("img", cb)
-      axios.post("http://18.234.207.58:5000/category/addcategory/",
+      axios.post("http://52.90.213.211:5000/category/addcategory/",
       data,
       {headers:{ 'Content-Type': 'multipart/form-data'}}
 
@@ -95,7 +95,7 @@ console.error(error);
     data.append('cd',cd)
     data.append("img", cb)
     data.append("idtoedit",this.state.idtoedit)
-    axios.post("http://18.234.207.58:5000/category/edit/",
+    axios.post("http://52.90.213.211:5000/category/edit/",
     data,
     {headers:{ 'Content-Type': 'multipart/form-data'}}
 
@@ -105,7 +105,7 @@ console.error(error);
 
   handleDelete = (id) => {
       let res=[]
-      fetch('http://18.234.207.58:5000/category/delete/', {
+      fetch('http://52.90.213.211:5000/category/delete/', {
         method: 'POST',
         headers: {
           Accept: 'application/json',

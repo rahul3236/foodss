@@ -18,7 +18,7 @@ export default class Location extends Component {
   }
 
   handlePaginationChange = (event, { activePage} ) => {
-    fetch('http://18.234.207.58:5000/sales/'+activePage)
+    fetch('http://52.90.213.211:5000/sales/'+activePage)
     .then((response) => response.json())
     .then((responseJson) => {
         console.log(responseJson)
@@ -31,7 +31,7 @@ export default class Location extends Component {
 }
     componentDidMount = () => {
     console.log("COmponent mounting")
-        fetch('http://18.234.207.58:5000/sales/')
+        fetch('http://52.90.213.211:5000/sales/')
     .then((response) => response.json())
     .then((responseJson) => {
         console.log(responseJson)
@@ -49,7 +49,7 @@ export default class Location extends Component {
    let idtodelivery=this.state.idtodelivery
    alert(idtodelivery)
     this.setState({show:false})
-    fetch('http://18.234.207.58:5000/sales/changesales/', {
+    fetch('http://52.90.213.211:5000/sales/changesales/', {
       method: 'POST',
       headers: {
         Accept: 'application/json',
@@ -90,7 +90,7 @@ export default class Location extends Component {
   handleDelete = (id) => {
       let res=[]
       alert(id)
-      fetch('http://18.234.207.58:5000/sales/deletesales/', {
+      fetch('http://52.90.213.211:5000/sales/deletesales/', {
         method: 'POST',
         headers: {
           Accept: 'application/json',

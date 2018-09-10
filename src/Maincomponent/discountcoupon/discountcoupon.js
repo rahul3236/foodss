@@ -20,7 +20,7 @@ export default class Location extends Component {
   }
 
   handlePaginationChange = (event, { activePage} ) => {
-    fetch('http://18.234.207.58:5000/discountcoupon/'+activePage)
+    fetch('http://52.90.213.211:5000/discountcoupon/'+activePage)
     .then((response) => response.json())
     .then((responseJson) => {
         console.log(responseJson)
@@ -33,7 +33,7 @@ export default class Location extends Component {
 }
     componentDidMount = () => {
     console.log("COmponent mounting")
-        fetch('http://18.234.207.58:5000/discountcoupon/')
+        fetch('http://52.90.213.211:5000/discountcoupon/')
     .then((response) => response.json())
     .then((responseJson) => {
         console.log(responseJson)
@@ -47,7 +47,7 @@ export default class Location extends Component {
 
   }
   fetchnewresponse = () => {
-    fetch('http://18.234.207.58:5000/discountcoupon/')
+    fetch('http://52.90.213.211:5000/discountcoupon/')
 .then((response) => response.json())
 .then((responseJson) => {
     console.log(responseJson)
@@ -69,7 +69,7 @@ export default class Location extends Component {
     data.append('ma',ma)
     data.append('idtoedit',this.state.idtoedit)
     data.append('img',cb)
-    axios.post("http://18.234.207.58:5000/discountcoupon/addcoupon/",
+    axios.post("http://52.90.213.211:5000/discountcoupon/addcoupon/",
     data,
     {headers:{ 'Content-Type': 'multipart/form-data'}}
 
@@ -93,7 +93,7 @@ export default class Location extends Component {
       data.append('ma',ma)
       data.append('idtoedit',this.state.idtoedit)
       data.append('img',cb)
-      axios.post("http://18.234.207.58:5000/discountcoupon/editcoupon/",
+      axios.post("http://52.90.213.211:5000/discountcoupon/editcoupon/",
       data,
       {headers:{ 'Content-Type': 'multipart/form-data'}}
 
@@ -114,7 +114,7 @@ export default class Location extends Component {
   }
   handleDelete = (id) => {
       let res=[]
-      fetch('http://18.234.207.58:5000/sales/deletesales/', {
+      fetch('http://52.90.213.211:5000/sales/deletesales/', {
         method: 'POST',
         headers: {
           Accept: 'application/json',
