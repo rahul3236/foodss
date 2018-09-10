@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <title>SocialHouse | Admin</title>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js">
+  </script>
+  <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+adminPro:300,400,400i,700" rel="stylesheet">
+</head>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand bg-white navbar-light border-bottom">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#"><i class="fa fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="index.php" class="nav-link">Home</a>
+      </li>
+      
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="logout.php" class="nav-link">Logout</a>
+      </li>
+    </ul>
+
+    <!-- SEARCH FORM -->
+   
+
+    <!-- Right navbar links -->
+
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="index3.html" class="brand-link">
+      <img src="dist/img/AdminLTELogo.png" alt="TSH Logo" class="brand-image img-circle elevation-3"
+           style="opacity: .8">
+      <span class="brand-text font-weight-light">The Social House</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">Admin</a>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa fa-dashboard"></i>
+              <p>
+                Bookings
+                <i class="right fa fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="booking_audience.php" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>Audience</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="booking_performer.php" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>Performer</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="shortlisted.php" class="nav-link">
+              <i class="nav-icon fa fa-th"></i>
+              <p>
+                Shortlisted Performers
+              </p>
+            </a>
+          </li>
+		     <li class="nav-item has-treeview">
+            <a href="#" class="nav-link ">
+              <i class="nav-icon fa fa-pencil"></i>
+              <p>
+                Records 
+                <i class="right fa fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="disapproved_record.php" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>Disapproved Records</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="inappropriate_record.php" class="nav-link ">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>Inappropriate Records</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="shortlist_record.php" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>Shortlisted Performer </p><br><p style="margin-left:32px;">Records</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+		       <li class="nav-item">
+            <a href="onspot_audience.php" class="nav-link">
+              <i class="nav-icon fa fa-user-circle-o"></i>
+              <p>
+                OnSpot Audience
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="onspot_performer.php" class="nav-link">
+              <i class="nav-icon fa fa-microphone"></i>
+              <p>
+                OnSpot Performer
+              </p>
+            </a>
+          </li>
+		   <li class="nav-item">
+            <a href="extras.php" class="nav-link active">
+              <i class="nav-icon fa fa-plus-square-o"></i>
+              <p>
+                Extras
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="view_video.php" class="nav-link">
+              <i class="nav-icon fa fa-user-circle-o"></i>
+              <p>
+                Edit Video
+              </p>
+            </a>
+          </li>
+            <li class="nav-item">
+            <a href="points_admin.php" class="nav-link">
+              <i class="nav-icon fa fa-trophy"></i>
+              <p>
+                Point System
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="gallery.php" class="nav-link">
+              <i class="nav-icon fa fa-table"></i>
+              <p>
+                Gallery
+              </p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark">Events</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item">Home</li>
+              <li class="breadcrumb-item active">Events</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+ 
+    <!-- Main content -->
+    <div class="content">
+      <div class="container-fluid">
+        <div class="row">
+			<!--Add audience form-->
+			<div class="col-sm-12">
+			   <!-- general form elements -->
+    <h2>Event Visibility</h2>
+    </div>
+    <div class="col-sm-12">
+    <div class="col-sm-3">
+      <h3>Public</h3>
+  </div>
+  <div class="col-sm-3">
+      <h3>Private</h3>
+  </div>
+  </div>
+</div>
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content -->
+  <!-- /.content-wrapper -->
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+    <div class="p-3">
+      <h5>Title</h5>
+      <p>Sidebar content</p>
+    </div>
+  </aside>
+  <!-- /.control-sidebar -->
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <!-- To the right -->
+    <!-- Default to the left -->
+    <strong>Copyright &copy; 2018 <a href="http://www.colleaguescron.com">Colleagues Cron</a>.</strong> All rights reserved.
+  </footer>
+</div>
+<!-- ./wrapper -->
+
+<!-- REQUIRED SCRIPTS -->
+
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.min.js"></script>
+<script>
+        
+       $(document).ready(function() {
+    setTimeout(function() {
+        $("#message1").fadeOut(1500);
+    }, 3000);  
+	});
+       
+        </script>
+</body>
+</html>

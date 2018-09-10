@@ -1,0 +1,10 @@
+.App {
+  border:1px solid black;
+  
+}
+.app2{
+  border:1px solid blue;
+}
+.menus {
+  flex:1;
+}
