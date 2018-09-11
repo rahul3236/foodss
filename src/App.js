@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Dropdown, Menu , Grid,Segment  ,Header, Icon, Label,  Table} from 'semantic-ui-react'
 import { BrowserRouter, Route,Switch,Link } from 'react-router-dom';
+import Homesettings from './Maincomponent/frontend/homesettings'
+import Contactpage from './Maincomponent/frontend/contact'
 
 import Product from './Maincomponent/Products/Products/allproducts'
 import Customer from './Maincomponent/customer/customer'
@@ -51,6 +53,8 @@ export default class App extends Component {
       <Route path="/product" component={Product} />
       <Route path="/managefaqs" component={Managefaqs} />
       <Route  path="/generalsettings" component={GeneralSettings}  />
+      <Route path="/homesettings" component={Homesettings} />
+      <Route path="/contactpage" component={Contactpage} />
        </Switch>
     </Grid.Column>
 </Grid>

@@ -55,6 +55,14 @@ export default class MenuExampleVerticalDropdown extends Component {
           onClick={this.handleItemClick}
         />
         </Link>
+        <Dropdown item text='Frontend Settings' active={true}>
+          <Dropdown.Menu style={{backgroundColor:"black"}}>
+          <Dropdown.Header><Link to="/homesettings"><p style={{color:"white"}}>Home Banner Settings</p></Link></Dropdown.Header>
+            <Dropdown.Header><Link to="/contactpage"><p style={{color:"white"}}>Contact Page</p></Link></Dropdown.Header>
+              <Dropdown.Header><Link to="/generalsettings"><p style={{color:"white"}}>General Settings</p></Link></Dropdown.Header>
+
+          </Dropdown.Menu>
+        </Dropdown>
         <Dropdown item text='Business Settings' active={true}>
           <Dropdown.Menu style={{backgroundColor:"black"}}>
           <Dropdown.Header><Link to="/managefaqs"><p style={{color:"white"}}>Manage FAQS</p></Link></Dropdown.Header>

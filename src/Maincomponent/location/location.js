@@ -19,7 +19,7 @@ export default class Location extends Component {
   }
 
   handlePaginationChange = (event, { activePage} ) => {
-    fetch('http://52.90.213.211:5000/location/'+activePage,
+    fetch('http://54.243.2.74:5000/location/'+activePage,
     {
  mode: 'cors',
  headers: {
@@ -40,7 +40,7 @@ export default class Location extends Component {
 
     componentDidMount = () => {
     console.log("COmponent mounting")
-        fetch('http://52.90.213.211:5000/location')
+        fetch('http://54.243.2.74:5000/location')
     .then((response) => response.json())
     .then((responseJson) => {
         console.log(responseJson)
@@ -53,7 +53,7 @@ export default class Location extends Component {
 
   }
 fetchnewresponse = () => {
-  fetch('http://52.90.213.211:5000/location')
+  fetch('http://54.243.2.74:5000/location')
 .then((response) => response.json())
 .then((responseJson) => {
   console.log(responseJson)
@@ -64,7 +64,7 @@ console.error(error);
 });
 }
   editwithserver = (value) => {
-    fetch('http://52.90.213.211:5000/location/editlocation/', {
+    fetch('http://54.243.2.74:5000/location/editlocation/', {
       method: 'POST',
       headers: {
         Accept: 'application/json',
@@ -103,7 +103,7 @@ console.error(error);
   }
   handleDelete = (id) => {
       let res=[]
-      fetch('http://52.90.213.211:5000/location/deletelocation/', {
+      fetch('http://54.243.2.74:5000/location/deletelocation/', {
         method: 'POST',
         headers: {
           Accept: 'application/json',
@@ -132,7 +132,7 @@ console.error(error);
 
 addwithserver = (value) => {
   alert(value)
-  fetch('http://52.90.213.211:5000/location/addlocation/', {
+  fetch('http://54.243.2.74:5000/location/addlocation/', {
     method: 'POST',
     headers: {
       Accept: 'application/json',

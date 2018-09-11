@@ -20,7 +20,7 @@ export default class Location extends Component {
   }
 
   handlePaginationChange = (event, { activePage} ) => {
-    fetch('http://52.90.213.211:5000/subcategory/'+activePage)
+    fetch('http://54.243.2.74:5000/subcategory/'+activePage)
     .then((response) => response.json())
     .then((responseJson) => {
         console.log(responseJson)
@@ -33,7 +33,7 @@ export default class Location extends Component {
 }
     componentDidMount = () => {
     console.log("COmponent mounting")
-        fetch('http://52.90.213.211:5000/subcategory/')
+        fetch('http://54.243.2.74:5000/subcategory/')
     .then((response) => response.json())
     .then((responseJson) => {
         console.log(responseJson)
@@ -47,7 +47,7 @@ export default class Location extends Component {
 }
 
 fetchnewresponse= () => {
-  fetch('http://52.90.213.211:5000/subcategory/')
+  fetch('http://54.243.2.74:5000/subcategory/')
 .then((response) => response.json())
 .then((responseJson) => {
   console.log(responseJson)
@@ -69,7 +69,7 @@ console.error(error);
         data.append('cname',cn)
         data.append('cdescription',cd)
         data.append("img", cb)
-        axios.post("http://52.90.213.211:5000/subcategory/addsubcategory/",
+        axios.post("http://54.243.2.74:5000/subcategory/addsubcategory/",
         data,
         {headers:{ 'Content-Type': 'multipart/form-data'}}
 
@@ -87,7 +87,7 @@ console.error(error);
     data.append('cdescription',cd)
     data.append("img", cb)
     data.append('idtoedit',this.state.idtoedit)
-    axios.post("http://52.90.213.211:5000/subcategory/editsubcategory/",
+    axios.post("http://54.243.2.74:5000/subcategory/editsubcategory/",
     data,
     {headers:{ 'Content-Type': 'multipart/form-data'}}
 
@@ -97,7 +97,7 @@ console.error(error);
   handleEdit = (id) => {
       alert("inside edit")
       this.setState({editmodal:true, idtoedit:id})
-      fetch('http://52.90.213.211:5000/product/catlist/', {
+      fetch('http://54.243.2.74:5000/product/catlist/', {
         method: 'POST',
         headers: {
           Accept: 'application/json',
@@ -117,7 +117,7 @@ console.error(error);
   }
   handleDelete = (id) => {
       let res=[]
-      fetch('http://52.90.213.211:5000/subcategory/delete/', {
+      fetch('http://54.243.2.74:5000/subcategory/delete/', {
         method: 'POST',
         headers: {
           Accept: 'application/json',

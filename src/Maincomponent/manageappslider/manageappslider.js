@@ -18,7 +18,7 @@ export default class Dashboard extends Component {
     }
 
   handlePaginationChange = (event, { activePage} ) => {
-    fetch('http://52.90.213.211:5000/manageapp/'+activePage)
+    fetch('http://54.243.2.74:5000/manageapp/'+activePage)
     .then((response) => response.json())
     .then((responseJson) => {
         console.log(responseJson)
@@ -31,7 +31,7 @@ export default class Dashboard extends Component {
 }
     componentDidMount = () => {
     console.log("COmponent mounting")
-        fetch('http://52.90.213.211:5000/manageapp/')
+        fetch('http://54.243.2.74:5000/manageapp/')
     .then((response) => response.json())
     .then((responseJson) => {
         console.log(responseJson)
@@ -58,7 +58,7 @@ export default class Dashboard extends Component {
       data.append('cname',cn)
      // data.append('cdescription',cd)
       data.append("img", cb)
-      axios.post("http://52.90.213.211:5000/manageapp/addslider/",
+      axios.post("http://54.243.2.74:5000/manageapp/addslider/",
       data,
       {headers:{ 'Content-Type': 'multipart/form-data'}}
 
@@ -68,7 +68,7 @@ export default class Dashboard extends Component {
     }
 
     fetchnewresponse= () => {
-      fetch('http://52.90.213.211:5000/manageapp/')
+      fetch('http://54.243.2.74:5000/manageapp/')
     .then((response) => response.json())
     .then((responseJson) => {
       console.log(responseJson)
@@ -93,7 +93,7 @@ export default class Dashboard extends Component {
     data.append('img',cb)
     data.append("idtoedit",this.state.idtoedit)
 
-    fetch("http://52.90.213.211:5000/manageapp/editslider/", {
+    fetch("http://54.243.2.74:5000/manageapp/editslider/", {
       method: 'POST',
       body: data,
 }).then((response) => {
@@ -105,7 +105,7 @@ export default class Dashboard extends Component {
   handleDelete = (id) => {
       let res=[]
       alert(id)
-      fetch('http://52.90.213.211:5000/manageapp/deleteslider/', {
+      fetch('http://54.243.2.74:5000/manageapp/deleteslider/', {
         method: 'POST',
         headers: {
           Accept: 'application/json',
