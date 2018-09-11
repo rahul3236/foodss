@@ -20,7 +20,7 @@ alert(this.state.file)
   data.append('message', this.state.message)
   data.append('title',this.state.title)
   data.append("img", this.state.file)
-  axios.post("http://54.243.2.74:5000/category/addcategory/",
+  axios.post("http://18.191.229.163:5000/category/addcategory/",
   data,
   {headers:{ 'Content-Type': 'multipart/form-data'}}
 

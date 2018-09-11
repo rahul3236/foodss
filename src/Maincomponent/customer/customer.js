@@ -19,7 +19,7 @@ export default class Dashboard extends Component {
     }
 
   handlePaginationChange = (event, { activePage} ) => {
-    fetch('http://54.243.2.74:5000/customer/'+activePage)
+    fetch('http://18.191.229.163:5000/customer/'+activePage)
     .then((response) => response.json())
     .then((responseJson) => {
         console.log(responseJson)
@@ -33,7 +33,7 @@ export default class Dashboard extends Component {
     componentDidMount = () => {
         alert("mounting")
     console.log("COmponent mounting")
-        fetch('http://54.243.2.74:5000/customer/')
+        fetch('http://18.191.229.163:5000/customer/')
     .then((response) => response.json())
     .then((responseJson) => {
         console.log(responseJson)
@@ -54,7 +54,7 @@ export default class Dashboard extends Component {
       alert("inside edit")
 
 
-      fetch('http://54.243.2.74:5000/customer/viewinfo', {
+      fetch('http://18.191.229.163:5000/customer/viewinfo', {
         method: 'POST',
         headers: {
           Accept: 'application/json',
@@ -75,7 +75,7 @@ export default class Dashboard extends Component {
   handleDelete = (id) => {
       let res=[]
       alert(id)
-      fetch('http://54.243.2.74:5000/customer/deleteuser', {
+      fetch('http://18.191.229.163:5000/customer/deleteuser', {
         method: 'POST',
         headers: {
           Accept: 'application/json',

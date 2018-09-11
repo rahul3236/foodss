@@ -16,7 +16,7 @@ export default class MenuExampleVerticalDropdown extends Component {
          }
      }
     componentDidMount = () => {
-      fetch('http://54.243.2.74:5000/productlist')
+      fetch('http://18.191.229.163:5000/productlist')
       .then((response) => response.json())
       .then ((responseJson) => this.setState({products:responseJson}))
       .catch((err) => console.log("Error Occured"))

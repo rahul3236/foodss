@@ -17,7 +17,7 @@ export default class Location extends Component {
   }
 
   handlePaginationChange = (event, { activePage} ) => {
-    fetch('http://54.243.2.74:5000/userfeedback/'+activePage)
+    fetch('http://18.191.229.163:5000/userfeedback/'+activePage)
     .then((response) => response.json())
     .then((responseJson) => {
         console.log(responseJson)
@@ -30,7 +30,7 @@ export default class Location extends Component {
 }
     componentDidMount = () => {
     console.log("COmponent mounting")
-        fetch('http://54.243.2.74:5000/userfeedback/')
+        fetch('http://18.191.229.163:5000/userfeedback/')
     .then((response) => response.json())
     .then((responseJson) => {
         console.log(responseJson)
@@ -53,7 +53,7 @@ export default class Location extends Component {
   }
   handleDelete = (id) => {
       let res=[]
-      fetch('http://54.243.2.74:5000/userfeedback/deleteuserfeedback/', {
+      fetch('http://18.191.229.163:5000/userfeedback/deleteuserfeedback/', {
         method: 'POST',
         headers: {
           Accept: 'application/json',
